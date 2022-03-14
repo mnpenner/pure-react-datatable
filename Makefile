@@ -3,7 +3,7 @@ SRC_FILES = $(shell find src -type f)
 .SUFFIXES:
 .PHONY: publish
 
-wds: yarn.lock
+dev: yarn.lock
 	BABEL_ENV=webpack $(NM)/webpack-dev-server --mode=development
 
 dist: yarn.lock $(SRC_FILES)
